@@ -1,3 +1,4 @@
+import { TitleCasePipe } from './title-case.pipe';
 import { ReadMorePipe } from './readmore.pipe';
 import { CourseService } from './course.service';
 import { CourseComponent } from './course.component';
@@ -7,8 +8,11 @@ import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { from } from 'rxjs';
 import { StarselectComponent } from './starselect/starselect.component';
+import { TitleCaseComponent } from './title-case/title-case.component';
+import { BtcolorchangeComponent } from './btcolorchange/btcolorchange.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { StarselectComponent } from './starselect/starselect.component';
     CourseComponent,
     CoursesComponent,
     ReadMorePipe,
-    StarselectComponent
+    StarselectComponent,
+    TitleCaseComponent,
+    TitleCasePipe,
+    BtcolorchangeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [
     CourseService

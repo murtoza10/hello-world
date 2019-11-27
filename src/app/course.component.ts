@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CourseService } from './course.service';
+import { faStar, faStarHalf,faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import {far} from '@fortawesome/free-solid-svg-icons';
  
 @Component({
     selector : 'course',
@@ -37,24 +39,27 @@ import { CourseService } from './course.service';
 
     {{text|readmore: 40}} <br/>
 
-    <span
-    class = "glyphicon"
-    [class.glyphicon-star] ="isSelected"
-    [class.glyphicon-star-empty] = "!isSelected"
-    (click)="onClick()"
-    ></span>
+    <i class="far fa-star"></i>
+
+    <fa-icon [icon]="faSta"></fa-icon>
+    <fa-icon [icon]="ft"></fa-icon>
+    <btcolorchange [color]=""></btcolorchange>
 
     `
 
 })
 
 export class CourseComponent{
+    faSta =faStar;
+    ft=faStarHalfAlt;
     title = "List of Courses ";
     fun ="for fun";
     imgURL ="http://lorempixel.com/400/400";
     colspan =10;
     isSelected = true;
     isActive = true;
+    color ="blue";
+    
     course ={
             title: "The Complete Angular Course",
             rating: 4.9678,
@@ -65,6 +70,9 @@ export class CourseComponent{
     text ="Sci-Hub is a website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways. Sci-Hub was founded by Alexandra Elbakyan in 2011 in Kazakhstan in response to the high cost of research papers behind paywalls.";
     courses;
     email ="me@gmail.com";
+
+
+
     getFun(){
         return this.fun;
     }
