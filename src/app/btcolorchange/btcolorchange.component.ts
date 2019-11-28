@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'btcolorchange',
@@ -7,12 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BtcolorchangeComponent implements OnInit {
 
-  @Input() color = "blue";
+  @Input('colorchange') color = "blue";
+  @Output('clickchange') change = new EventEmitter();
+
   isClicked= false;
   onClicked(){
       this.isClicked=!this.isClicked;
       if(this.isClicked) this.color="green";
-      else this.color="blue";      
+      else this.color="blue";   
+      this.change.emit({newValue :this.color});   
   }
   constructor() { }
 

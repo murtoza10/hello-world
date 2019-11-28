@@ -1,8 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { CourseService } from './course.service';
-import { faStar, faStarHalf,faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
-import {far} from '@fortawesome/free-solid-svg-icons';
+import { faStar,faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+
  
+interface ColorChangedEventArgs{
+    newValue: string
+}
+
 @Component({
     selector : 'course',
     template : `
@@ -43,10 +47,18 @@ import {far} from '@fortawesome/free-solid-svg-icons';
 
     <fa-icon [icon]="faSta"></fa-icon>
     <fa-icon [icon]="ft"></fa-icon>
-    <btcolorchange [color]=""></btcolorchange>
+    <btcolorchange [colorchange]="color" (clickchange)="onColorChanged($event)" ></btcolorchange>
 
-    `
+    <starselect>
+    <div class="heading">heading</div>
+    <div class="body">
+    <h2>Body</h2>
+    <p>Something to write</p>
+    </div>
+    </starselect>
 
+    `,
+    encapsulation: ViewEncapsulation.Emulated
 })
 
 export class CourseComponent{
@@ -75,6 +87,10 @@ export class CourseComponent{
 
     getFun(){
         return this.fun;
+    }
+
+    onColorChanged(eventArgs: ColorChangedEventArgs){
+        console.log("color changed ", eventArgs);
     }
 
     onClick(){

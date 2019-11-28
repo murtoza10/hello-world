@@ -1,6 +1,4 @@
  import {Pipe, PipeTransform} from '@angular/core';
-import { WSAECONNREFUSED } from 'constants';
-import { WrappedNodeExpr } from '@angular/compiler';
 
  @Pipe({
      name: 'titleCase'
