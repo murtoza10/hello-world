@@ -13,6 +13,7 @@ import { from } from 'rxjs';
 import { StarselectComponent } from './starselect/starselect.component';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { BtcolorchangeComponent } from './btcolorchange/btcolorchange.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BtcolorchangeComponent } from './btcolorchange/btcolorchange.component'
     StarselectComponent,
     TitleCaseComponent,
     TitleCasePipe,
-    BtcolorchangeComponent
+    BtcolorchangeComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

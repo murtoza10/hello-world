@@ -57,6 +57,10 @@ interface ColorChangedEventArgs{
     </div>
     </starselect>
 
+    <like
+    [likesCount]="tweet.likeCount" [isClicked]="tweet.isLiked"
+    ></like>
+
     `,
     encapsulation: ViewEncapsulation.Emulated
 })
@@ -79,6 +83,12 @@ export class CourseComponent{
             price: 141.9011,
             releasedate: new Date(2019,4,1)
     }
+
+    tweet ={
+        likeCount : 10,
+        isLiked: false
+    }
+
     text ="Sci-Hub is a website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways. Sci-Hub was founded by Alexandra Elbakyan in 2011 in Kazakhstan in response to the high cost of research papers behind paywalls.";
     courses;
     email ="me@gmail.com";
