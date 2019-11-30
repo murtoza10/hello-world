@@ -60,6 +60,26 @@ interface ColorChangedEventArgs{
     <like
     [likesCount]="tweet.likeCount" [isClicked]="tweet.isLiked"
     ></like>
+<br>
+    <div *ngIf="courses.length>0; then coursesList else noCourses"></div>
+    <ng-template #coursesList>
+    List of Courses 
+    <ul>
+        <li *ngFor= "let course of courses">
+        {{course}}
+        </li>
+    </ul>  
+    </ng-template>
+    <ng-template #noCourses>
+    No Courses Yet
+    </ng-template>
+
+    <div [hidden]= "courses.length==0">
+    List of Courses
+    </div>
+    <div [hidden]= "courses.length>0">
+    No Courses Yet
+    </div>
 
     `,
     encapsulation: ViewEncapsulation.Emulated
