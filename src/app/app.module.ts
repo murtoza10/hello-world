@@ -14,6 +14,7 @@ import { StarselectComponent } from './starselect/starselect.component';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { BtcolorchangeComponent } from './btcolorchange/btcolorchange.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LikeComponent } from './like/like.component';
     TitleCaseComponent,
     TitleCasePipe,
     BtcolorchangeComponent,
-    LikeComponent
+    LikeComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,

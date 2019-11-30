@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'starselect',
   templateUrl: './starselect.component.html',
   styleUrls: ['./starselect.component.css']
 })
-export class StarselectComponent implements OnInit {
+export class StarselectComponent {
 
   isSelected = true;
   onClick(){
     this.isSelected = !this.isSelected;
 }
-  constructor() { }
+  canSave =false;
 
-  ngOnInit() {
+  task={
+    title: 'Review the Applications',
+    assignee: null  
   }
+  
 
 }

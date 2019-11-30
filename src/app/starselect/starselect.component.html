@@ -13,3 +13,36 @@
     [class.glyphicon-star-empty] = "!isSelected"
     (click)="onClick()"
     ></span>
+
+    <span
+    class = "glyphicon"
+    [ngClass]="{
+        'glyphicon-star': isSelected,
+        'glyphicon-star-empty': !isSelected
+    }"
+    (click)="onClick()"
+    ></span>
+
+    <button
+        [style.backgroundColor]="canSave ? 'green' : 'gray'"
+        [style.color]="canSave ? 'white' : 'black'"
+        [style.fontWeight]= "CanSave ? 'bold' : 'normal'"
+    >
+        Save
+    </button>
+
+    <button
+        [ngStyle]="{
+            backgroundColor: canSave ? 'green' : 'gray',
+            color: canSave ? 'white' : 'black',
+            fontWeight: CanSave ? 'bold' : 'normal'
+        }"
+    >
+        Save
+    </button>
+
+    <span *ngIf="task.assignee">{{task.assignee.name}}</span>
+    <span>{{task.assignee?.name}}</span>
+
+    <input type="text" [appInputFormat]="'uppercase'">
+    
