@@ -1,0 +1,23 @@
+
+.toggle-body{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.toggle-body-heading{
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.toggle-body-body{
+    padding: 20px;
+}
+
+.expanded{
+    background: #f0f0f0;
+}
+
+.glyphicon{
+    float:right;
+}

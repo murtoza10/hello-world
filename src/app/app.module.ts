@@ -15,6 +15,7 @@ import { TitleCaseComponent } from './title-case/title-case.component';
 import { BtcolorchangeComponent } from './btcolorchange/btcolorchange.component';
 import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ToggleBodyComponent } from './toggle-body/toggle-body.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InputFormatDirective } from './input-format.directive';
     TitleCasePipe,
     BtcolorchangeComponent,
     LikeComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    ToggleBodyComponent
   ],
   imports: [
     BrowserModule,
