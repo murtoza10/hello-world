@@ -16,6 +16,7 @@ import { BtcolorchangeComponent } from './btcolorchange/btcolorchange.component'
 import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ToggleBodyComponent } from './toggle-body/toggle-body.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ToggleBodyComponent } from './toggle-body/toggle-body.component';
     BtcolorchangeComponent,
     LikeComponent,
     InputFormatDirective,
-    ToggleBodyComponent
+    ToggleBodyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
